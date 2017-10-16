@@ -16,7 +16,7 @@ public class Author implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long idAuthor;
 
     @Column(name = "name")
     private String name;
@@ -39,6 +39,6 @@ public class Author implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("Author[id=%d, name=%s]", id, name);
+        return String.format("Author[id=%d, name=%s]", idAuthor, name);
     }
 }

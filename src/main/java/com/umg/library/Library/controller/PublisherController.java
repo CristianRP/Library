@@ -30,13 +30,13 @@ public class PublisherController {
         return publisherList;
     }
 
-    @PostMapping(value = "/author")
+    @PostMapping(value = "/publisher")
     public Publisher postPublisher(@RequestBody Publisher publisher) {
         mRepository.save(new Publisher(publisher.getName()));
         return publisher;
     }
 
-    @DeleteMapping(value = "/author/{id}")
+    @DeleteMapping(value = "/publisher/{id}")
     public void deletePublisher(@PathVariable long id) {
         mRepository.delete(id);
     }

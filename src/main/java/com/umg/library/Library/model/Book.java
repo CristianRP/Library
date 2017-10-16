@@ -30,10 +30,12 @@ public class Book implements Serializable {
     @Column( name = "edicion" )
     private String edicion;
 
-    @ManyToOne
+    @ManyToOne( cascade = CascadeType.ALL)
+    @JoinColumn(name = "idPublisher")
     private Publisher publisher;
 
-    @ManyToOne
+    @ManyToOne( cascade = CascadeType.ALL)
+    @JoinColumn(name = "idAuthor")
     private Author author;
 
     public Book() {

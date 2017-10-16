@@ -16,7 +16,7 @@ public class Publisher implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long idPublisher;
 
     @Column(name = "name")
     private String name;
@@ -39,6 +39,6 @@ public class Publisher implements Serializable {
     @Override
     public String toString() {
         return String.format("[PublisherController[id=%d, name=%s]",
-                id, name);
+                idPublisher, name);
     }
 }
